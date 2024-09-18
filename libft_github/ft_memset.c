@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 19:28:08 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/17 19:28:08 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/18 19:11:59 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/18 19:11:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /* #include <stdio.h> */
 
-size_t	ft_strlen(const char *s)
+void	*ft_memset(void *b, int c, size_t len)
 {
-    size_t	len;
+    unsigned char	*ptr;
+    unsigned char	value;
 
-    len = 0;
-    while (s[len])
-        len++;
-    return (len);
+    ptr = (unsigned char *)b;
+    value = (unsigned char)c;
+    while (len--)
+        *ptr++ = value;
+    return (b);
 }
 
 /* int main()
 {
-    char *str = "Hello World!";
-    printf("Length of string is: %zu\n", ft_strlen(str));
+    char str[50] = "Hello World!";
+    printf("Before memset(): %s\n", str);
+    ft_memset(str, 'a', 5);
+    printf("After memset(): %s\n", str);
     return 0;
 } */
