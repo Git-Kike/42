@@ -11,49 +11,37 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+/* #include <stdio.h> */
 
-void *memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (!dest || !src)
-	{
-		return NULL;
-	}
-	
-	unsigned char *d;
-	const unsigned char *s;
-	
+	unsigned char			*d;
+	const unsigned char		*s;
+
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-
+	if (!dest || !src)
+		return (NULL);
 	if (d < s || d >= s + n)
 	{
-		while (n --)
-		{
+		while (n--)
 			*d++ = *s++;
-		}
 	}
-	
 	else
 	{
 		d += n;
 		s += n;
 		while (n--)
-		{
 			*(--d) = *(--s);
-		}
 	}
-	return dest;
+	return (dest);
 }
 
-int main()
+/* int main()
 {
-	char buffer[] = "Hola, Mundo!";
-	
-	printf("Sin memmove: %s\n", buffer);
-
-	memmove(buffer + 7, buffer + 6, 6);
-	printf("Con memmove: %s\n", buffer);
-
+	char str_d[] = "Geeks";
+	char str_s[] = "Quiz";
+	ft_memmove(str_d, str_s, 4);
+	printf("Copied string: %s\n", str_d);
 	return 0;
-}
+} */

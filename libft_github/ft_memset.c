@@ -15,21 +15,21 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-    unsigned char	*ptr;
-    unsigned char	value;
+	unsigned char	*ptr;
+	unsigned char	value;
 
-    ptr = (unsigned char *)b;
-    value = (unsigned char)c;
-    while (len--)
-        *ptr++ = value;
-    return (b);
+	ptr = (unsigned char *)b;
+	value = (unsigned char)c;
+	while (len--)
+		*ptr++ = value;
+	return (b);
 }
 
 /* int main()
 {
-    char str[50] = "Hello World!";
-    printf("Before memset(): %s\n", str);
-    ft_memset(str, 'a', 5);
-    printf("After memset(): %s\n", str);
-    return 0;
+	char str[50] = "Hello World!";
+	printf("Before memset(): %s\n", str);
+	ft_memset(str, 'a', 5);
+	printf("After memset(): %s\n", str);
+	return 0;
 } */

@@ -15,17 +15,17 @@
 
 size_t	ft_strlen(const char *s)
 {
-    size_t	len;
+	size_t	len;
 
-    len = 0;
-    while (s[len])
-        len++;
-    return (len);
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }
 
 /* int main()
 {
-    char *str = "Hello World!";
-    printf("Length of string is: %zu\n", ft_strlen(str));
-    return 0;
+	char *str = "Hello World!";
+	printf("Length of string is: %zu\n", ft_strlen(str));
+	return 0;
 } */
