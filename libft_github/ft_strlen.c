@@ -26,6 +26,6 @@ size_t	ft_strlen(const char *s)
 /* int main()
 {
 	char *str = "Hello World!";
-	printf("Length of string is: %zu\n", ft_strlen(str));
+	printf("Longitud de la cadena: %zu\n", ft_strlen(str));
 	return 0;
 } */

@@ -11,26 +11,34 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* #include <stdio.h>
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	src_len;
 
-	if (!src)
-		return (0);
-	src_len = ft_strlen(src);
-	if (!dst)
+	i = 0;
+	src_len = 0;
+	while (src[src_len])
+		src_len++;
+	if (dstsize == 0)
 		return (src_len);
-	if (dstsize > 0)
+	while (src[i] && i < dstsize - 1)
 	{
-		i = 0;
-		while (src[i] && i < (dstsize - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		dst[i] = src[i];
+		i++;
 	}
+	dst[i] = '\0';
 	return (src_len);
 }
+
+/* int main()
+{
+	char src[] = "Hello";
+	char dst[10];
+	size_t n = 3;
+	printf("Longitud de src: %lu\n", ft_strlcpy(dst, src, n));
+	printf("Contenido de dst: %s\n", dst);
+	return 0;
+} */

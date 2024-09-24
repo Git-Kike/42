@@ -28,8 +28,8 @@ void	*ft_memset(void *b, int c, size_t len)
 /* int main()
 {
 	char str[50] = "Hello World!";
-	printf("Before memset(): %s\n", str);
+	printf("Sin memset(): %s\n", str);
 	ft_memset(str, 'a', 5);
-	printf("After memset(): %s\n", str);
+	printf("Con memset(): %s\n", str);
 	return 0;
 } */

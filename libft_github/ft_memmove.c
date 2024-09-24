@@ -42,6 +42,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char str_d[] = "Geeks";
 	char str_s[] = "Quiz";
 	ft_memmove(str_d, str_s, 4);
-	printf("Copied string: %s\n", str_d);
+	printf("Cadena copiada: %s\n", str_d);
 	return 0;
 } */
