@@ -6,12 +6,11 @@
 /*   By: eolivero <eolivero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 13:30:29 by eolivero          #+#    #+#             */
-/*   Updated: 2024/09/25 14:15:32 by eolivero         ###   ########.fr       */
+/*   Updated: 2024/09/25 14:48:52 by eolivero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* #include <stdio.h> */
 
 int	ft_toupper(int c)
 {

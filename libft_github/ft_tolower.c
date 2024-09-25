@@ -6,13 +6,12 @@
 /*   By: eolivero <eolivero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:16:00 by eolivero          #+#    #+#             */
-/*   Updated: 2024/09/25 14:27:53 by eolivero         ###   ########.fr       */
+/*   Updated: 2024/09/25 14:49:05 by eolivero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* #include <stdio.h>
- */
+
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
