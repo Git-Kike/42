@@ -1,44 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 14:20:28 by eolivero          #+#    #+#             */
-/*   Updated: 2024/10/01 12:48:30 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/01 13:17:31 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/01 13:17:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	i;
-	long	result;
-	int		sign;
+	void	*ptr;
 
-	i = 0;
-	result = 0;
-	sign = 1;
-	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
-	{
-		if (nptr[i] == '-')
-			sign = -1;
-		i++;
-	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		result = result * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (result * sign);
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }
 /* int main()
 {
-	char *nptr = "-123456";
-	printf("%d\n", ft_atoi(nptr));
+	int *ptr;
+	ptr = ft_calloc(5, sizeof(int));
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%d\n", ptr[i]);
+	}
 	return 0;
 } */
