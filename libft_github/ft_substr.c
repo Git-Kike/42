@@ -6,7 +6,7 @@
 /*   By: eolivero <eolivero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 13:18:14 by eolivero          #+#    #+#             */
-/*   Updated: 2024/10/02 13:27:44 by eolivero         ###   ########.fr       */
+/*   Updated: 2024/10/02 15:18:33 by eolivero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,21 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	ft_memcpy(substr, s + start, len);
 	return (substr);
 }
+/* int main(void)
+{
+    const char *str = "Hello, World!";
+    unsigned int start = 7;
+    size_t len = 5;
+
+    char *result = ft_substr(str, start, len);
+    if (result)
+    {
+        printf("Substring: %s\n", result);
+        free(result);
+    }
+    else
+    {
+        printf("Error: ft_substr returned NULL\n");
+    }
+    return 0;
+} */
