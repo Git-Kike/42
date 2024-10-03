@@ -6,7 +6,7 @@
 /*   By: eolivero <eolivero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 11:00:06 by eolivero          #+#    #+#             */
-/*   Updated: 2024/10/03 13:01:03 by eolivero         ###   ########.fr       */
+/*   Updated: 2024/10/03 13:46:14 by eolivero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*result;
 
 	result = ft_strtrim(s1, set);
-	if (result)
-	{
-		printf("Cadena original: '%s'\n", s1);
-		printf("Cadena recortada: '%s'\n", result);
-		free(result);
-	}
-	else
-	{
-		printf("Error: ft_strtrim devolvió NULL.\n");
-	}
+	printf("Cadena recortada: '%s'\n", result);
+	free(result);
 	return (0);
 } */
