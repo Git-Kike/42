@@ -12,61 +12,104 @@
 
 #include "libft.h"
 
-static size_t	ft_count_words(const char *s, char c)
+static int	count_words(char const *s, char c)
 {
-	size_t	count;
-	size_t	i;
+	int	count;
+	int	i;
 
 	count = 0;
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] != c)
-		{
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			count++;
-			while (s[i] && s[i] != c)
-				i++;
-		}
-		else
-			i++;
+		i++;
 	}
 	return (count);
 }
 
-static size_t	ft_word_len(const char *s, char c)
+static char	*get_next_word(char const *s, char c, int *start)
 {
-	size_t	len;
+	int		len;
+	char	*word;
 
+	while (s[*start] == c)
+		(*start)++;
 	len = 0;
-	while (s[len] && s[len] != c)
+	while (s[*start + len] && s[*start + len] != c)
 		len++;
-	return (len);
+	word = ft_substr(s, *start, len);
+	*start += len;
+	return (word);
 }
 
-char	**ft_split(const char *s, char c)
+static void	free_result(char **result, int words)
 {
-	char	**tab;
-	size_t	i;
-	size_t	j;
-	size_t	k;
+	int	i;
 
-	if (!s || !(tab = ft_calloc(ft_count_words(s, c) + 1, sizeof(char *))))
+	i = 0;
+	while (i < words)
+	{
+		free(result[i]);
+		i++;
+	}
+	free(result);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+	int		words;
+	int		i;
+	int		start;
+
+	if (!s)
+		return (NULL);
+	words = count_words(s, c);
+	result = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!result)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	start = 0;
+	while (i < words)
 	{
-		if (s[i] != c)
+		result[i] = get_next_word(s, c, &start);
+		if (!result[i])
 		{
-			if (!(tab[j] = ft_calloc(ft_word_len(s + i, c) + 1, sizeof(char))))
-				return (NULL);
-			k = 0;
-			while (s[i] && s[i] != c)
-				tab[j][k++] = s[i++];
-			j++;
+			free_result(result, i);
+			return (NULL);
 		}
-		else
-			i++;
+		i++;
 	}
-	return (tab);
+	result[i] = NULL;
+	return (result);
 }
+
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*str = "Hola,mundo,esto,es,una,prueba";
+	char	**result;
+	int		i;
+
+	result = ft_split(str, ',');
+	if (!result)
+	{
+		printf("Error: ft_split falló\n");
+		return (1);
+	}
+
+	i = 0;
+	while (result[i])
+	{
+		printf("Palabra %d: %s\n", i + 1, result[i]);
+		free(result[i]);
+		i++;
+	}
+	free(result);
+
+	return (0);
+}
+*/
