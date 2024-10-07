@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: eolivero <eolivero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:25:06 by eolivero          #+#    #+#             */
-/*   Updated: 2024/10/07 14:20:15 by marvin           ###   ########.fr       */
+/*   Updated: 2024/10/07 14:30:15 by eolivero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,20 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	return (res);
 }
 
-int main()
+/* char my_toupper(unsigned int index, char c) // Mantener la firma
 {
-	char *s = "Hello";
-	char *res = ft_strmapi(s, &ft_toupper);
-	printf("%s\n", res);
-	return 0;
+    (void)index; // Ignoramos el parámetro 'index' para evitar advertencias
+    return (char)ft_toupper((int)c);
 }
+
+int main(void)
+{
+    char *s = "Hello";
+    char *res;
+
+    // Pasamos la función correctamente sin necesidad de un casting
+    res = ft_strmapi(s, my_toupper);
+    printf("%s\n", res);
+    free(res); // Liberar la memoria
+    return 0;
+} */
