@@ -15,26 +15,24 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int				i;
-	char			*res;
 	char			cc;
 
 	cc = (char) c;
-	res = NULL;
 	i = 0;
 	while (s[i])
+		i++;
+	while (i >= 0)
 	{
 		if (s[i] == cc)
-			res = (char *) &s[i];
-		i++;
+			return ((char *) &s[i]);
+		i--;
 	}
-	if (s[i] == cc)
-		res = (char *) &s[i];
-	return (res);
+	return (NULL);
 }
 /* int main()
 {
-	char *s = "Hello";
-	int c = 'l';
-	printf("%s\n", ft_strrchr(s, c));
+	char s[] = "Hello";
+	char c = 'l';
+	printf("%s\n", ft_strrchr(s, c)); // Debería imprimir lo
 	return 0;
 } */

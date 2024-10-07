@@ -14,13 +14,14 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126);
 }
 /* int main()
 {
-	char c = 'a';
-	printf("%d\n", ft_isprint(c));
+	printf("%d\n", ft_isprint('a')); // Debería imprimir 1
+	printf("%d\n", ft_isprint('Z')); // Debería imprimir 1
+	printf("%d\n", ft_isprint('1')); // Debería imprimir 1
+	printf("%d\n", ft_isprint(' ')); // Debería imprimir 1
+	printf("%d\n", ft_isprint(31)); // Debería imprimir 0
 	return 0;
 } */

@@ -14,13 +14,13 @@
 
 int	ft_isdigit(int c)
 {
-	if ((c >= '0' && c <= '9'))
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }
 /* int main()
 {
-	char c = 'a';
-	printf("%d\n", ft_isdigit(c));
+	printf("%d\n", ft_isdigit('a')); // Debería imprimir 0
+	printf("%d\n", ft_isdigit('Z')); // Debería imprimir 0
+	printf("%d\n", ft_isdigit('1')); // Debería imprimir 1
+	printf("%d\n", ft_isdigit(' ')); // Debería imprimir 0
 	return 0;
 } */

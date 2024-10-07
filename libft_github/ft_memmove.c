@@ -38,9 +38,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 /* int main()
 {
-	char str_d[] = "Geeks";
-	char str_s[] = "Quiz";
-	ft_memmove(str_d, str_s, 4);
-	printf("Cadena copiada: %s\n", str_d);
+	char src[] = "Hello";
+	char dst[10];
+	size_t n = 3;
+	printf("%s\n", ft_memmove(dst, src, n));
 	return 0;
 } */

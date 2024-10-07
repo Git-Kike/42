@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eolivero <eolivero@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:16:00 by eolivero          #+#    #+#             */
-/*   Updated: 2024/09/25 14:49:05 by eolivero         ###   ########.fr       */
+/*   Updated: 2024/10/08 01:34:45 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,15 @@
 
 int	ft_tolower(int c)
 {
-	if (c >= 65 && c <= 90)
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);
 }
-/* int main() {
-    char test_char1 = 'a';
-    char test_char2 = 'Z';
-    char test_char3 = '1';
-
-    printf("'%c' -> Convertido: '%c'\n", test_char1, ft_tolower(test_char1));
-    printf("'%c' -> Convertido: '%c'\n", test_char2, ft_tolower(test_char2));
-    printf("'%c' -> Convertido: '%c'\n", test_char3, ft_tolower(test_char3));
-
+/* int main()
+{
+    printf("%c\n", ft_tolower('a')); // Debería imprimir a
+    printf("%c\n", ft_tolower('Z')); // Debería imprimir z
+    printf("%c\n", ft_tolower('1')); // Debería imprimir 1
+    printf("%c\n", ft_tolower(' ')); // Debería imprimir ' '
     return 0;
 } */

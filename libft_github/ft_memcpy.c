@@ -33,13 +33,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 /* int main()
 {
-	char source[] = "Hola";
-	char destination[20];
-
-	ft_memcpy(destination, source, 5);
-
-	printf("Fuente: %s\n", source);
-	printf("Destino: %s\n", destination);
-
+	char src[] = "Hello";
+	char dst[10];
+	size_t n = 3;
+	printf("%s\n", ft_memcpy(dst, src, n));
 	return 0;
 } */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eolivero <eolivero@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 17:29:56 by eolivero          #+#    #+#             */
-/*   Updated: 2024/09/26 18:23:21 by eolivero         ###   ########.fr       */
+/*   Updated: 2024/10/08 01:55:41 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,30 +17,23 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while ((s1[i] || s2[i]) && i < n)
+	if (n == 0)
+		return (0);
+	while (i < n)
 	{
 		if ((unsigned char) s1[i] != (unsigned char) s2[i])
 			return ((unsigned char) s1[i] - (unsigned char) s2[i]);
+		if (s1[i] == '\0')
+			return (0);
 		i++;
 	}
 	return (0);
 }
-
-/* int	main(void)
+/* int main()
 {
-	const char	*str1 = "Hola";
-	const char	*str2 = "Holanda";
-	size_t		n = 4;
-
-	int result = strncmp(str1, str2, n);
-
-	if (result == 0) {
-		printf("Las primeras %zu letras de las cadenas son iguales.\n", n);
-	} else if (result < 0) {
-		printf("'%s' es menor que '%s' en %zu letras.\n", str1, str2, n);
-	} else {
-		printf("'%s' es mayor que '%s' en %zu letras.\n", str1, str2, n);
-	}
-
+	char s1[] = "Hello";
+	char s2[] = "Hello";
+	size_t n = 5;
+	printf("%d\n", ft_strncmp(s1, s2, n)); // Debería imprimir 0
 	return 0;
 } */

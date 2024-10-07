@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 14:20:28 by eolivero          #+#    #+#             */
-/*   Updated: 2024/10/01 12:48:30 by marvin           ###   ########.fr       */
+/*   Updated: 2024/10/08 00:34:02 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,12 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-/* int main()
-{
-	char *nptr = "-123456";
-	printf("%d\n", ft_atoi(nptr));
-	return 0;
+/* int main() {
+    printf("%d\n", ft_atoi("   +42"));      // Debería imprimir 42
+    printf("%d\n", ft_atoi("   -42"));      // Debería imprimir -42
+    printf("%d\n", ft_atoi("   42"));       // Debería imprimir 42
+    printf("%d\n", ft_atoi("   +   42"));   // Debería imprimir 0
+    printf("%d\n", ft_atoi(NULL));           // Debería imprimir 0
+    printf("%d\n", ft_atoi("   +0"));        // Debería imprimir 0
+    return 0;
 } */

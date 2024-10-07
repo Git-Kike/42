@@ -14,16 +14,13 @@
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
-
-// int	main(void)
-// {
-// 	int		result;
-
-// 	result = ft_isalpha('A');
-// 	printf("%d", result);
-// 	return (0);
-// }
+/* int main()
+{
+	printf("%d\n", ft_isalpha('a')); // Debería imprimir 1
+	printf("%d\n", ft_isalpha('Z')); // Debería imprimir 1
+	printf("%d\n", ft_isalpha('1')); // Debería imprimir 0
+	printf("%d\n", ft_isalpha(' ')); // Debería imprimir 0
+	return 0;
+} */

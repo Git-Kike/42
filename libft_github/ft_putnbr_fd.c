@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 17:53:30 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/17 17:53:30 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/07 23:29:10 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/07 23:29:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	ft_putnbr_fd(int n, int fd)
+{
+	unsigned int	nbr;
 
-{
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= '0' && c <= '9'))
-		return (1);
-	return (0);
+	if (fd < 0)
+		return ;
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		nbr = (unsigned int)(-n);
+	}
+	else
+		nbr = (unsigned int)n;
+	if (nbr >= 10)
+		ft_putnbr_fd(nbr / 10, fd);
+	write(fd, &"0123456789"[nbr % 10], 1);
 }
-/* int main()
+/* int main(void)
 {
-	printf("%d\n", ft_isalnum('a')); // Debería imprimir 1
-	printf("%d\n", ft_isalnum('Z')); // Debería imprimir 1
-	printf("%d\n", ft_isalnum('1')); // Debería imprimir 1
-	printf("%d\n", ft_isalnum(' ')); // Debería imprimir 0
+	ft_putnbr_fd(42, 1);
 	return 0;
 } */

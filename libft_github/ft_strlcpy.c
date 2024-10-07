@@ -17,27 +17,28 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	src_len;
 
-	i = 0;
 	src_len = 0;
 	while (src[src_len])
 		src_len++;
 	if (dstsize == 0)
 		return (src_len);
-	while (src[i] && i < dstsize - 1)
+	i = 0;
+	while (i < dstsize - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
+	if (dstsize > 0)
+		dst[i] = '\0';
 	return (src_len);
 }
 
 /* int main()
 {
-	char src[] = "Hello";
-	char dst[10];
-	size_t n = 3;
-	printf("Longitud de src: %lu\n", ft_strlcpy(dst, src, n));
-	printf("Contenido de dst: %s\n", dst);
+	char dst[50] = "Hello";
+	char src[50] = "World";
+	size_t dstsize = 50;
+	printf("%zu\n", ft_strlcpy(dst, src, dstsize));
+	printf("%s\n", dst);
 	return 0;
 } */

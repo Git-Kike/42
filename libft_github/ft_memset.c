@@ -23,12 +23,10 @@ void	*ft_memset(void *b, int c, size_t len)
 		*ptr++ = value;
 	return (b);
 }
-
 /* int main()
 {
-	char str[50] = "Hello World!";
-	printf("Sin memset(): %s\n", str);
-	ft_memset(str, 'a', 5);
-	printf("Con memset(): %s\n", str);
+	char s[] = "Hello";
+	ft_memset(s, 'a', 3);
+	printf("%s\n", s);
 	return 0;
 } */

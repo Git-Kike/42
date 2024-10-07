@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:54:33 by eolivero          #+#    #+#             */
-/*   Updated: 2024/09/27 12:16:59 by marvin           ###   ########.fr       */
+/*   Updated: 2024/10/08 01:42:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ char	*ft_strchr(const char *s, int c)
 }
 /* int main()
 {
-	char *s = "Hello";
-	int c = 'l';
-	printf("%s\n", ft_strchr(s, c));
+	char s[] = "Hello";
+	char c = 'l';
+	printf("%s\n", ft_strchr(s, c)); // Debería imprimir llo
 	return 0;
 } */

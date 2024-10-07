@@ -21,10 +21,9 @@ size_t	ft_strlen(const char *s)
 		len++;
 	return (len);
 }
-
 /* int main()
 {
-	char *str = "Hello World!";
-	printf("Longitud de la cadena: %zu\n", ft_strlen(str));
+	char s[] = "Hola!";
+	printf("%lu\n", ft_strlen(s));
 	return 0;
 } */

@@ -28,8 +28,8 @@ void	ft_bzero(void *s, size_t n)
 
 /* int main()
 {
-	char str[] = "Hello World!";
-	ft_bzero(str, 5);
-	printf("%s\n", str);
+	char s[] = "Hello";
+	ft_bzero(s, 3);
+	printf("%s\n", s);
 	return 0;
 } */

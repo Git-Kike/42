@@ -14,13 +14,14 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	return (c >= 0 && c <= 127);
 }
 /* int main()
 {
-	char c = 'a';
-	printf("%d\n", ft_isascii(c));
+	printf("%d\n", ft_isascii('a')); // Debería imprimir 1
+	printf("%d\n", ft_isascii('Z')); // Debería imprimir 1
+	printf("%d\n", ft_isascii('1')); // Debería imprimir 1
+	printf("%d\n", ft_isascii(' ')); // Debería imprimir 1
+	printf("%d\n", ft_isascii(128)); // Debería imprimir 0
 	return 0;
 } */
