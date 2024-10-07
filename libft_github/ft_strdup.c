@@ -26,8 +26,7 @@ char	*ft_strdup(const char *s1)
 }
 /* int main()
 {
-	char *s1 = "Hello World!";
-	char *s2 = ft_strdup(s1);
-	printf("%s\n", s2);
+	char s[] = "Hello";
+	printf("%s\n", ft_strdup(s)); // Debería imprimir Hello
 	return 0;
 } */
