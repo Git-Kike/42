@@ -31,8 +31,10 @@ char	*ft_strrchr(const char *s, int c)
 }
 /* int main()
 {
-	char s[] = "Hello";
-	char c = 'l';
-	printf("%s\n", ft_strrchr(s, c)); // Debería imprimir lo
+	printf("%s\n", ft_strrchr("Hola hola", 'a')); // Debería imprimir a
+	printf("%s\n", ft_strrchr("Hola hola", 'o')); // Debería imprimir ola
+	printf("%s\n", ft_strrchr("Hola hola", 'H')); // Debería imprimir Hola
+	printf("%s\n", ft_strrchr("Hola hola", 'l')); // Debería imprimir la
+	printf("%s\n", ft_strrchr("Hola hola", 'z')); // Debería imprimir (null)
 	return 0;
 } */

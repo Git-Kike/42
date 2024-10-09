@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:54:33 by eolivero          #+#    #+#             */
-/*   Updated: 2024/10/08 01:42:38 by marvin           ###   ########.fr       */
+/*   Updated: 2024/10/09 19:42:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ char	*ft_strchr(const char *s, int c)
 }
 /* int main()
 {
-	char s[] = "Hello";
-	char c = 'l';
-	printf("%s\n", ft_strchr(s, c)); // Debería imprimir llo
+	printf("%s\n", ft_strchr("Hola hola", 'a')); // Debería imprimir a hola
+	printf("%s\n", ft_strchr("Hola hola", 'o')); // Debería imprimir ola hola
+	printf("%s\n", ft_strchr("Hola hola", 'H')); // Debería imprimir Hola hola
+	printf("%s\n", ft_strchr("Hola hola", 'l')); // Debería imprimir la hola
+	printf("%s\n", ft_strchr("Hola hola", 'z')); // Debería imprimir (null)
 	return 0;
 } */

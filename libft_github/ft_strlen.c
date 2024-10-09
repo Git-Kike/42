@@ -23,7 +23,8 @@ size_t	ft_strlen(const char *s)
 }
 /* int main()
 {
-	char s[] = "Hola!";
-	printf("%lu\n", ft_strlen(s));
+	printf("%zu\n", ft_strlen("Hola")); // Debería imprimir 4
+	printf("%zu\n", ft_strlen("")); // Debería imprimir 0
+	printf("%zu\n", ft_strlen("Hola mundo")); // Debería imprimir 10
 	return 0;
 } */
