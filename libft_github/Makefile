@@ -24,8 +24,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
-bonus: $(OBJ) $(BONUS_OBJ)
-	$(AR) $(NAME) $(OBJ) $(BONUS_OBJ)
+bonus:
+	make SRC="$(SRC) $(BONUS_SRC)"
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
