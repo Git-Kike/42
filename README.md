@@ -1,6 +1,6 @@
 # 42
 
-Bienvenido a mi repositorio de proyectos de la [Escuela 42](https://www.42.fr/). Aquí iré subiendo y actualizando los distintos proyectos que vaya realizando a lo largo del curso, con el objetivo de documentar mi progreso y aprendizaje en programación.
+Bienvenido a mi repositorio de proyectos de [42 Madrid](https://www.42madrid.com/). Aquí iré subiendo y actualizando los distintos proyectos que vaya realizando a lo largo del curso, con el objetivo de documentar mi progreso y aprendizaje en programación.
 
 ## Sobre 42
 
