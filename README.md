@@ -1,6 +1,6 @@
 # 42
 
-Bienvenido a mi repositorio de proyectos de [42 Madrid](https://www.42madrid.com/). Aquí iré subiendo y actualizando los distintos proyectos que vaya realizando a lo largo del curso, con el objetivo de documentar mi progreso y aprendizaje en programación.
+Bienvenido a mi repositorio de proyectos de [42 Madrid](https://www.42madrid.com/) (Fundación Telefónica). Aquí iré subiendo y actualizando los distintos proyectos que vaya realizando a lo largo del curso, con el objetivo de documentar mi progreso y aprendizaje en programación.
 
 ## Sobre 42
 
@@ -8,7 +8,7 @@ Bienvenido a mi repositorio de proyectos de [42 Madrid](https://www.42madrid.com
 
 ### Algunos aspectos clave de la metodología de 42:
 
-- **Aprendizaje autodidacta**: El progreso depende de cada estudiante y su capacidad para investigar, experimentar y resolver problemas de manera independiente.
+- **"Aprender a aprender"**: El progreso depende de cada estudiante y su capacidad para investigar, experimentar y resolver problemas de manera independiente.
 - **Peer-to-peer learning**: Los estudiantes colaboran entre sí, corrigiendo y mejorando su código mutuamente.
 - **Cultura de proyectos**: Todo el aprendizaje se estructura a través de proyectos prácticos que reflejan retos reales de la industria tecnológica.
 - **Evaluación mediante la Norminette**: Cada proyecto debe seguir estrictos estándares de codificación, siendo evaluado tanto por otros compañeros como por el sistema automatizado de corrección.
