@@ -1,6 +1,6 @@
 # Libft
 
-**Libft** es el primer proyecto del curso de la [Escuela 42](https://www.42.fr/), diseñado para que los estudiantes desarrollen su propia biblioteca de funciones en C. Este proyecto consiste en recrear y reinterpretar varias funciones esenciales de la librería estándar de C (*libc*), además de ampliar su funcionalidad con una serie de funciones adicionales más avanzadas.
+**Libft** es el primer proyecto del curso de 42, diseñado para que los estudiantes desarrollen su propia biblioteca de funciones en C. Este proyecto consiste en recrear y reinterpretar varias funciones esenciales de la librería estándar de C (*libc*), además de ampliar su funcionalidad con una serie de funciones adicionales más avanzadas.
 
 ## Contenidos
 
