@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eolivero <eolivero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 15:30:15 by eolivero          #+#    #+#             */
-/*   Updated: 2024/10/15 15:30:15 by eolivero         ###   ########.fr       */
+/*   Created: 2024/10/15 15:31:48 by eolivero          #+#    #+#             */
+/*   Updated: 2024/10/15 15:31:48 by eolivero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <unistd.h>
-# include <stdio.h>
-# include <stddef.h>
-# include <stdarg.h>
+#include "ft_printf.h"
 
-int	ft_printf(const char *str, ...);
-int	converter(char c, va_list var_args);
-int	ft_putchar(char c);
-int	ft_putstr(char *str);
-int	ft_putpun(void *ptr);
-int	ft_putnbr(int n);
-int	ft_putuns(unsigned int n);
-int	ft_puthex(unsigned int n, int lower);
-
-#endif
+int	ft_putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+/* int	main(void)
+{
+	ft_printf("Character: %c\n", 'A');
+	return (0);
+} */

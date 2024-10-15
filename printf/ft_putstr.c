@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eolivero <eolivero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 15:30:15 by eolivero          #+#    #+#             */
-/*   Updated: 2024/10/15 15:30:15 by eolivero         ###   ########.fr       */
+/*   Created: 2024/10/15 15:52:38 by eolivero          #+#    #+#             */
+/*   Updated: 2024/10/15 15:52:38 by eolivero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <unistd.h>
-# include <stdio.h>
-# include <stddef.h>
-# include <stdarg.h>
+#include "ft_printf.h"
 
-int	ft_printf(const char *str, ...);
-int	converter(char c, va_list var_args);
-int	ft_putchar(char c);
-int	ft_putstr(char *str);
-int	ft_putpun(void *ptr);
-int	ft_putnbr(int n);
-int	ft_putuns(unsigned int n);
-int	ft_puthex(unsigned int n, int lower);
+int	ft_putstr(char *str)
+{
+	int	i;
 
-#endif
+	if (str == NULL)
+		return (ft_putstr("(null)"));
+	i = 0;
+	while (str[i] != '\0')
+		i += ft_putchar(str[i]);
+	return (i);
+}
+
+/* int	main(void)
+{
+    ft_printf("String: %s\n", "Hello, World!");
+    return (0);
+} */
