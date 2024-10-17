@@ -17,10 +17,7 @@ int	ft_putnbr(int n)
 	int	count;
 
 	if (n == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return (11);
-	}
+		return (ft_putstr("-2147483648"));
 	count = 0;
 	if (n < 0)
 	{

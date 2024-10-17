@@ -31,7 +31,7 @@ int	converter(char c, va_list var_args)
 	else if (c == '%')
 		return (ft_putchar('%'));
 	else
-		return (0);
+		return (ft_putchar(c));
 }
 
 int	ft_printf(const char *str, ...)
@@ -48,7 +48,10 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			i++;
-			count += converter(str[i], var_args);
+			if (str[i] != '\0')
+				count += converter(str[i], var_args);
+			else
+				count += ft_putchar('%');
 		}
 		else
 		{

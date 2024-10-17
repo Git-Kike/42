@@ -14,29 +14,26 @@
 
 int	ft_puthex(unsigned int n, int lower)
 {
-	char	*numbers;
-	char	buffer[9];
-	int		count;
-	int		i;
+	const char	*numbers;
+	char		buffer[9];
+	int			i;
+	int			count;
 
 	if (lower == 1)
 		numbers = "0123456789abcdef";
 	else
 		numbers = "0123456789ABCDEF";
-	i = 0;
-	count = 0;
 	if (n == 0)
 		return (ft_putchar('0'));
+	i = 0;
 	while (n > 0)
 	{
 		buffer[i++] = numbers[n % 16];
 		n /= 16;
 	}
+	count = 0;
 	while (i > 0)
-	{
-		ft_putchar(buffer[--i]);
-		count++;
-	}
+		count += ft_putchar(buffer[--i]);
 	return (count);
 }
 /* int    main(void)

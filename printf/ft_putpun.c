@@ -18,23 +18,21 @@ int	ft_putpun(void *ptr)
 	char				buffer[19];
 	const char			*hex_digits;
 	int					i;
-	int					length;
 
 	hex_digits = "0123456789abcdef";
 	if (ptr == NULL)
 		return (ft_putstr("(nil)"));
-	i = 18;
 	address = (unsigned long long)ptr;
-	buffer[i--] = '\0';
-	while (address != 0)
+	buffer[18] = '\0';
+	i = 17;
+	while (address > 0)
 	{
 		buffer[i--] = hex_digits[address % 16];
 		address /= 16;
 	}
 	buffer[i--] = 'x';
-	buffer[i--] = '0';
-	length = ft_putstr(&buffer[i + 1]);
-	return (length);
+	buffer[i] = '0';
+	return (ft_putstr(&buffer[i]));
 }
 /* int	main(void)
 {
