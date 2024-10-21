@@ -2,8 +2,7 @@
 
 Bienvenido a mi repositorio de proyectos de [42 Madrid](https://www.42madrid.com/) (Fundación Telefónica). Aquí iré subiendo y actualizando los distintos proyectos que vaya realizando a lo largo del curso, con el objetivo de documentar mi progreso y aprendizaje en programación.
 
-[![Kike's 42 stats](https://badge.mediaplus.ma/colorfulwaves/eolivero)](https://github.com/oakoudad/badge42)
-
+[![eolivero's 42 stats](https://badge.mediaplus.ma/colorfulwaves/eolivero)](https://github.com/oakoudad/badge42)
 ## Sobre 42
 
 **42** es una red global de escuelas de programación gratuita, reconocida por su enfoque innovador de aprendizaje. Sin profesores ni clases tradicionales, los estudiantes aprenden mediante un modelo de aprendizaje basado en proyectos (*project-based learning*), resolviendo retos y colaborando con otros estudiantes.
