@@ -107,3 +107,16 @@ static char	*ft_strchr(char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
+
+/* int	main (){
+	char	*str;
+	int		fd;
+	fd = open("get_next_line.c", O_RDONLY);
+	while((str=get_next_line(fd))!=NULL){
+		printf("%s", str);
+		free(str);
+	}
+	free(str);
+	close(fd);
+	return (0);
+} */
